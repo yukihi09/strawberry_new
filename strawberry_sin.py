@@ -28,7 +28,7 @@ col= st.columns(5)
 def syasinhyouzi():
     if st.button("↓{}".format(i+1), key=i+1): 
         df_first = df[:i]
-        df_first = pd.concat([df_first,(pd.Series('11.jpg', index=df.columns), ignore_index=True)])
+        df_first = pd.concat([df_first,pd.Series('11.jpg', index=df.columns)], ignore_index=True)
         df_second = df[i:]
         df_concat = pd.concat([df_first, df_second])
         df_concat.to_csv("result.csv", index=False ) 
