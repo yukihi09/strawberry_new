@@ -54,3 +54,4 @@ st.title('')
 st.title('')
 df = pd.read_csv('result.csv',encoding='cp932')
 st.download_button(label='結果ダウンロード', data=df.to_csv(), file_name='result_.csv')
+
